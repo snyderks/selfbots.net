@@ -38,13 +38,13 @@ func ReadConfig(path string) (Config, error) {
 			AuthRedirectHandler: os.Getenv("AUTH_REDIRECT"),
 			BotServerName:       os.Getenv("BOT_SERVER"),
 			BotServerPath:       os.Getenv("BOT_SERVER_PATH"),
+			Scopes:              []string{"identify", "rpc.api", "rpc.notifications.read"},
 		}
 		if !strings.Contains(config.HTTPPort, ":") {
 			config.HTTPPort = ":" + config.HTTPPort
 		}
 		fmt.Println(config)
-		fmt.Println(err.Error())
-		return config, err
+		return config, nil
 	}
 	config := Config{}
 	err = json.Unmarshal(file, &config)
