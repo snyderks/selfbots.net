@@ -1,0 +1,33 @@
+<head>
+</head>
+<body>
+    <p>Receiving authentication...</p>
+    <script>
+        function sendToken(token, url) {
+          return new Promise((resolve, reject) => {
+            const req = new XMLHttpRequest()
+            req.open('POST', url)
+            req.onload = () => req.status === 200 ? resolve(req.response) : reject(Error(req.statusText))
+            req.onerror = (e) => reject(Error(`Network Error: ${e}`))
+            req.send(JSON.stringify({
+              "token": token,
+            }))
+          });
+        }
+        function getParameterByName(name, url) {
+            if (!url) {
+            url = window.location.href;
+            }
+            console.log("url")
+            var regex = /(access_token=)(\w+)(&|$)/
+            var results = regex.exec(url)
+            if (!results) return null
+            if (!results[2]) return ''
+            return decodeURIComponent(results[2].replace(/\+/g, " "))
+        }
+        var tokenString = getParameterByName("token")
+        localStorage.setItem("token", tokenString)
+
+        window.location = location.protocol + "//" + location.hostname + ":" + location.port
+    </script>
+</body>

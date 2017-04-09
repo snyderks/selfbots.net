@@ -1,0 +1,35 @@
+[
+  {
+    "category": "Basic",
+    "selections": [
+      "help",
+      "ping",
+      "nick",
+      "me"
+    ]
+  },
+  {
+    "category": "Admin",
+    "selections": [
+      "ban",
+      "prune",
+      "kick"
+    ]
+  },
+  {
+    "category": "Fun",
+    "selections": [
+      "paste",
+      "face",
+      "emoji",
+      "roll"
+    ]
+  },
+  {
+    "category": "User State",
+    "selections": [
+      "playing",
+      "streaming"
+    ]
+  }
+]

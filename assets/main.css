@@ -1,0 +1,215 @@
+@font-face {
+    font-family: "Uni Sans";
+    src: url("/assets/fonts/UniSansHeavy.woff");
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Uni Sans";
+    src: url("/assets/fonts/UniSansHeavyItalic.woff");
+    font-weight: bold;
+    font-style: italic;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  font-family: sans-serif;
+  font-size: 63.7%;
+  background-color: #222;
+}
+
+header {
+  font-family: "Uni Sans", sans-serif;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 200px;
+  height: 25%;
+  background-color: #006d47;
+  text-align: center;
+  color: #E9E9E9;
+}
+
+.content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 1000px;
+  color: #DDD;
+  font-size: 1em;
+}
+
+.content h2 {
+  font-weight: lighter;
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.content h3 {
+  font-weight: lighter;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+a, .discord-link {
+  color: #DDD;
+  text-decoration: none;
+}
+
+.discord-link {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 1.5em;
+  font-family: "Uni Sans", sans-serif;
+}
+
+a:hover, .discord-link:hover {
+  text-decoration: underline;
+}
+
+a, .discord-link:visited {
+  color: #DDD;
+}
+
+.selections-category {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.selections-category-header {
+  width: 100%;
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+
+.selection {
+  padding: 10px;
+  padding-right: 15px;
+  font-size: 1.5em;
+  margin: 0;
+  border: 1px solid #333;
+  -webkit-transition: background-color 0.5s ease;
+  -moz-transition: background-color 0.5s ease;
+  -ms-transition: background-color 0.5s ease;
+  -o-transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease;
+}
+
+.selection:hover, .selection-checked {
+  background-color: #006d47;
+  -webkit-transition: background-color 0.5s ease;
+  -moz-transition: background-color 0.5s ease;
+  -ms-transition: background-color 0.5s ease;
+  -o-transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease;
+}
+
+.disclaimer {
+  font-size: 1.5em;
+}
+
+.disclaimer h1 {
+  font-size: 4em;
+  font-family: "Uni Sans", sans-serif;
+  margin: 10px 0;
+}
+
+.disclaimer ol {
+  padding-left: 20px;
+}
+
+.content label {
+  color: #BBB;
+  font-size: 1.5em;
+}
+
+header h1, h3 {
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+header h1 {
+  font-weight: lighter;
+  font-size: 6em;
+}
+
+header h3 {
+  font-weight: lighter;
+  font-size: 3em;
+}
+
+button, input {
+  font-size: inherit;
+  font-size: 2em;
+}
+
+#token-input {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 2px;
+  border: 1px solid #333;
+  background-color: #444;
+  color: #E9E9E9;
+  width: 750px;
+  font-family: monospace;
+}
+
+button {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 3px;
+  border: none;
+  background-color: #006d47;
+  color: #E9E9E9;
+}
+
+hr {
+  border: 0;
+  width: 80%;
+  background-color: #999;
+  height: 1px;
+  margin-bottom: 20px;
+}
+
+footer {
+  text-align: center;
+  width: 100%;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #DDD;
+  font-size: 1.5em;
+  margin-bottom: 50px;
+}
+
+.bears {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.bear {
+  width: 50px;
+  height: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+@media (max-width: 800px) {
+  #token-input {
+    width: 100%;
+  }
+}
