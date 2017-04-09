@@ -38,7 +38,7 @@ func ReadConfig(path string) (Config, error) {
 			AuthRedirectHandler: os.Getenv("AUTH_REDIRECT"),
 			BotServerName:       os.Getenv("BOT_SERVER"),
 			BotServerPath:       os.Getenv("BOT_SERVER_PATH"),
-			Scopes:              []string{"identify", "rpc.api", "rpc.notifications.read"},
+			Scopes:              []string{"identify"},
 		}
 		if !strings.Contains(config.HTTPPort, ":") {
 			config.HTTPPort = ":" + config.HTTPPort
