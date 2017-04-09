@@ -40,6 +40,7 @@ func ReadConfig(path string) (Config, error) {
 			BotServerPath:       os.Getenv("BOT_SERVER_PATH"),
 		}
 		scopes := os.Getenv("SCOPES")
+		fmt.Println(scopes)
 		err = json.Unmarshal([]byte(scopes), &config.Scopes)
 		if err != nil {
 			fmt.Println(err)
