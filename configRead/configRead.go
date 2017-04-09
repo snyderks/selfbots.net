@@ -47,6 +47,8 @@ func ReadConfig(path string) (Config, error) {
 		if !strings.Contains(config.HTTPPort, ":") {
 			config.HTTPPort = ":" + config.HTTPPort
 		}
+		fmt.Println(config)
+		fmt.Println(err.Error())
 		return config, err
 	}
 	config := Config{}
