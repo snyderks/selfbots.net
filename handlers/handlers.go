@@ -171,6 +171,7 @@ func init() {
 	fmt.Println("Handlers initializing")
 	var err error
 	config, err = configRead.ReadConfig(configLocation)
+	config.Scopes = []string{"identify", "rpc.api", "rpc.notifications.read"}
 	if err != nil {
 		panic("Couldn't read the config. It's either not there or isn't in the correct format.")
 	}
